@@ -1,0 +1,27 @@
+#Thu Mar 21 01:41:30 GMT+00:00 2002
+Mobile_phone=Fars\u00EDmi
+user_area=Starfssvi\u00F0
+all=Allir
+new_employee=N\u00FDr starfsma\u00F0ur
+user_name=Nafn
+previous_user=Fyrri
+e_mail=E-mail
+new_division=N\u00FD deild
+user_title=Titill
+user_gender=Kyn
+extra_info=A\u00F0rar uppl\u00FDsingar
+delete_division=Ey\u00F0a deild
+user_school=Sk\u00F3laganga
+user_education=Menntun
+next_user=N\u00E6sti
+work_phone=Vinnus\u00EDmi
+user_began_work=H\u00F3f st\u00F6rf
+staff_admin=Starfsmannastj\u00F3ri
+close=LOKA
+image=Mynd
+back=Til baka
+locale=Tungum\u00E1l
+delete_employee=Ey\u00F0a starfsmanni
+save=VISTA
+iw.component.com.idega.block.staff.presentation.StaffBrowser.name=Starfsmenn
+user_age=Aldur

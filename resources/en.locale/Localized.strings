@@ -1,0 +1,22 @@
+#Wed Mar 05 15:51:13 CET 2003
+Mobile_phone=Mobile phone
+user_area=Area
+all=All
+user_name=Name
+previous_user=Prev
+user_title=Title
+user_gender=Gender
+extra_info=Extra info
+user_school=School
+user_education=Education
+next_user=Next
+work_phone=Work phone
+user_began_work=Began work
+staff_admin=Staff Editor
+close=CLOSE
+image=Image
+back=Back
+locale=Locale
+save=SAVE
+iw.component.com.idega.block.staff.presentation.StaffBrowser.name=Staff Browser
+user_age=Age
