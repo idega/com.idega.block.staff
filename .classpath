@@ -7,6 +7,8 @@
   </classpathentry>
   <classpathentry kind="src" path="/com.idega.core">
   </classpathentry>
+  <classpathentry kind="src" path="/com.idega.user">
+  </classpathentry>
   <classpathentry kind="src" path="/com.idega.block.media">
   </classpathentry>
   <classpathentry kind="var" path="MAVEN_REPO/servletapi/jars/servletapi-2.4.jar">
