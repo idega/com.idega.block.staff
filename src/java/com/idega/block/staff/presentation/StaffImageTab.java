@@ -100,8 +100,7 @@ public class StaffImageTab extends UserTab{
   public boolean store(IWContext iwc){
     try{
       if(getUserId() > -1){
-        StaffBusiness business = new StaffBusiness();
-        business.updateImage(getUserId(),(String)fieldValues.get(this.imageFieldName));
+        StaffBusiness.updateImage(getUserId(),(String)fieldValues.get(this.imageFieldName));
       }
     }
     catch(Exception e){

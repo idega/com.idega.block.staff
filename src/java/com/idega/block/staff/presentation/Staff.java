@@ -322,7 +322,7 @@ public class Staff extends Block implements Builderaware {
 
 			int userAge = 0;
 			if (dateOfBirth != null)
-				userAge = (new IWTimestamp().getDaysBetween(dateOfBirth, dateToday)) / 365;
+				userAge = (IWTimestamp.getDaysBetween(dateOfBirth, dateToday)) / 365;
 
 			Text age = new Text(_iwrb.getLocalizedString("user_age", "Age") + ":");
 			age.setFontStyle(_headlineStyle);

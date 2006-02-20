@@ -229,8 +229,7 @@ public class StaffMetaTab extends UserTab{
   public boolean store(IWContext iwc){
     try{
       if(getUserId() > -1){
-        StaffBusiness business = new StaffBusiness();
-        business.updateMetaData(getUserId(),(String)fieldValues.get(this.attribute1FieldName),(String)fieldValues.get(this.value1FieldName)
+        StaffBusiness.updateMetaData(getUserId(),(String)fieldValues.get(this.attribute1FieldName),(String)fieldValues.get(this.value1FieldName)
                                           ,(String)fieldValues.get(this.attribute2FieldName),(String)fieldValues.get(this.value2FieldName)
                                           ,(String)fieldValues.get(this.attribute3FieldName),(String)fieldValues.get(this.value3FieldName)
                                           ,(String)fieldValues.get(this.attribute4FieldName),(String)fieldValues.get(this.value4FieldName)

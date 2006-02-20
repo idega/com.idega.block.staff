@@ -404,7 +404,7 @@ public class StaffFinder {
 
       if ( stamp != null )
 
-        userAge = (new IWTimestamp().getDaysBetween(stamp,dateToday))/365;
+        userAge = (IWTimestamp.getDaysBetween(stamp,dateToday))/365;
 
 /*
 
