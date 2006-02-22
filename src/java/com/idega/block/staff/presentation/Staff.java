@@ -68,8 +68,6 @@ public class Staff extends Block implements Builderaware {
 
 	private boolean _showAge;
 
-	private boolean _showGender;
-
 	private boolean _showEducation;
 
 	private boolean _showTitle;
@@ -81,8 +79,6 @@ public class Staff extends Block implements Builderaware {
 	private boolean _showBeganWork;
 
 	private boolean _showArea;
-
-	private boolean _showImage;
 
 	private boolean _showMetaData;
 
@@ -663,13 +659,11 @@ public class Staff extends Block implements Builderaware {
 		_headlineStyle = "font-family: Arial, Helvetica,sans-serif;font-weight:bold;font-size: 8pt;color: #000000;";
 
 		_showAge = true;
-		_showGender = true;
 		_showEducation = true;
 		_showTitle = true;
 		_showSchool = true;
 		_showBeganWork = true;
 		_showArea = true;
-		_showImage = true;
 		_showMetaData = true;
 	}
 
@@ -694,7 +688,6 @@ public class Staff extends Block implements Builderaware {
 	}
 
 	public void setShowGender(boolean showGender) {
-		_showGender = showGender;
 	}
 
 	public void setShowEducation(boolean showEducation) {
@@ -722,7 +715,6 @@ public class Staff extends Block implements Builderaware {
 	}
 
 	public void setShowImage(boolean showImage) {
-		_showImage = showImage;
 	}
 
 	public void setShowExtraInfo(boolean showExtraInfo) {

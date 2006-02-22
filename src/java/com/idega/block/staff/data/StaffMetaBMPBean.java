@@ -13,8 +13,6 @@ import java.sql.SQLException;
 
 public class StaffMetaBMPBean extends com.idega.block.staff.data.StaffMetaDataBMPBean implements com.idega.block.staff.data.StaffMeta {
 
-    private static String sClassName = StaffMeta.class.getName();
-
     public StaffMetaBMPBean(){
       super();
     }

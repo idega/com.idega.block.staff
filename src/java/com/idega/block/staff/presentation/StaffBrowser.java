@@ -65,7 +65,6 @@ public class StaffBrowser extends Block implements Builderaware {
 	private boolean _showListTitle;
 	private boolean _showBeganWork;
 	private boolean _showArea;
-	private boolean _showImage;
 	private boolean _showMetaData;
 	private boolean _showWorkPhone;
 	private boolean _showListWorkPhone;
@@ -762,7 +761,6 @@ public class StaffBrowser extends Block implements Builderaware {
 		_showTitle = true;
 		_showBeganWork = true;
 		_showArea = true;
-		_showImage = true;
 		_showMetaData = true;
 		_showListTitle = false;
 		_showWorkPhone = true;
@@ -816,7 +814,6 @@ public class StaffBrowser extends Block implements Builderaware {
 	}
 
 	public void setShowImage(boolean showImage) {
-		_showImage = showImage;
 	}
 
 	public void setShowExtraInfo(boolean showExtraInfo) {
