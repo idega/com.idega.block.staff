@@ -12,8 +12,10 @@ import com.idega.block.staff.data.StaffInfo;
 import com.idega.block.staff.data.StaffLocalized;
 import com.idega.block.staff.data.StaffMeta;
 import com.idega.block.staff.data.StaffMetaData;
+import com.idega.block.staff.data.StaffMetaDataBMPBean;
 import com.idega.core.user.business.UserBusiness;
 import com.idega.core.user.business.UserGroupBusiness;
+import com.idega.data.GenericEntity;
 import com.idega.transaction.IdegaTransactionManager;
 import com.idega.util.IWTimestamp;
 
@@ -582,7 +584,7 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 
     try {
 
-      com.idega.block.staff.data.StaffMetaBMPBean.getStaticInstance(StaffMeta.class).deleteMultiple(com.idega.block.staff.data.StaffMetaBMPBean.getColumnNameUserID(),Integer.toString(userID),com.idega.block.staff.data.StaffMetaBMPBean.getColumnNameLocaleId(),Integer.toString(localeID));
+      GenericEntity.getStaticInstance(StaffMeta.class).deleteMultiple(StaffMetaDataBMPBean.getColumnNameUserID(),Integer.toString(userID),com.idega.block.staff.data.StaffMetaBMPBean.getColumnNameLocaleId(),Integer.toString(localeID));
 
     }
 

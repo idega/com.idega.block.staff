@@ -4,6 +4,8 @@ import java.sql.Date;
 import java.sql.SQLException;
 
 import com.idega.core.file.data.ICFile;
+import com.idega.data.GenericEntity;
+import com.idega.user.data.UserBMPBean;
 
 
 /**
@@ -52,13 +54,13 @@ public class StaffInfoBMPBean extends com.idega.data.GenericEntity implements co
     }
 
     public static StaffInfo getStaticInstance(){
-      return (StaffInfo)com.idega.block.staff.data.StaffInfoBMPBean.getStaticInstance(sClassName);
+      return (StaffInfo)GenericEntity.getStaticInstance(sClassName);
     }
 
 
     /*  ColumNames begin   */
 
-    public static String getColumnNameUserID(){return com.idega.core.user.data.UserBMPBean.getColumnNameUserID();}
+    public static String getColumnNameUserID(){return UserBMPBean.getColumnNameUserID();}
     public static String getColumnNameTitle(){return "title";}
     public static String getColumnNameEducation(){return "education";}
     public static String getColumnNameSchool(){return "school";}

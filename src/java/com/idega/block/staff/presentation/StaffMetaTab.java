@@ -3,6 +3,7 @@ package com.idega.block.staff.presentation;
 import com.idega.block.staff.business.StaffBusiness;
 import com.idega.block.staff.data.StaffMetaData;
 import com.idega.core.user.presentation.UserTab;
+import com.idega.data.GenericEntity;
 import com.idega.presentation.IWContext;
 import com.idega.presentation.Table;
 import com.idega.presentation.ui.TextArea;
@@ -249,7 +250,7 @@ public class StaffMetaTab extends UserTab{
   public void initFieldContents(){
 
     try{
-      StaffMetaData[] staffMetaData = (StaffMetaData[]) com.idega.block.staff.data.StaffMetaDataBMPBean.getStaticInstance(StaffMetaData.class).findAllByColumn(com.idega.block.staff.data.StaffMetaDataBMPBean.getColumnNameUserID(),Integer.toString(getUserId()),"=");
+      StaffMetaData[] staffMetaData = (StaffMetaData[]) GenericEntity.getStaticInstance(StaffMetaData.class).findAllByColumn(com.idega.block.staff.data.StaffMetaDataBMPBean.getColumnNameUserID(),Integer.toString(getUserId()),"=");
 
       for ( int a = 0; a < staffMetaData.length; a++ ) {
         fieldValues.put("attribute"+Integer.toString(a),(staffMetaData[a].getAttribute() != null) ? staffMetaData[a].getAttribute():"" );

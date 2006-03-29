@@ -13,6 +13,7 @@ import com.idega.block.staff.data.StaffInfo;
 import com.idega.block.staff.data.StaffLocalized;
 import com.idega.block.staff.data.StaffMeta;
 import com.idega.block.staff.data.StaffMetaData;
+import com.idega.block.staff.data.StaffMetaDataBMPBean;
 import com.idega.core.contact.data.Email;
 import com.idega.core.contact.data.Phone;
 import com.idega.core.data.GenericGroup;
@@ -21,8 +22,10 @@ import com.idega.core.user.business.UserBusiness;
 import com.idega.core.user.business.UserGroupBusiness;
 import com.idega.core.user.data.User;
 import com.idega.data.EntityFinder;
+import com.idega.data.GenericEntity;
 import com.idega.presentation.IWContext;
 import com.idega.user.data.Group;
+import com.idega.user.data.UserBMPBean;
 import com.idega.util.IWTimestamp;
 
 
@@ -123,7 +126,7 @@ public class StaffFinder {
 
     try {
 
-      return (StaffMeta[]) com.idega.block.staff.data.StaffMetaBMPBean.getStaticInstance(StaffMeta.class).findAllByColumn(com.idega.block.staff.data.StaffMetaBMPBean.getColumnNameUserID(),Integer.toString(userID),'=',com.idega.block.staff.data.StaffMetaBMPBean.getColumnNameLocaleId(),Integer.toString(localeID),'=');
+      return (StaffMeta[]) GenericEntity.getStaticInstance(StaffMeta.class).findAllByColumn(StaffMetaDataBMPBean.getColumnNameUserID(),Integer.toString(userID),'=',com.idega.block.staff.data.StaffMetaBMPBean.getColumnNameLocaleId(),Integer.toString(localeID),'=');
 
     }
 
@@ -155,7 +158,7 @@ public class StaffFinder {
 
     try {
 
-      List allUsers = EntityFinder.findAll(com.idega.core.user.data.UserBMPBean.getStaticInstance());
+      List allUsers = EntityFinder.findAll(GenericEntity.getStaticInstance(User.class));
 
       /*if ( allUsers != null ) {
 
@@ -223,7 +226,7 @@ public class StaffFinder {
 
     try {
 
-      List allUsers = EntityFinder.findAllByColumn(com.idega.core.user.data.UserBMPBean.getStaticInstance(),com.idega.core.user.data.UserBMPBean.getColumnNameFirstName(),letter+"%");
+      List allUsers = EntityFinder.findAllByColumn(GenericEntity.getStaticInstance(User.class),UserBMPBean.getColumnNameFirstName(),letter+"%");
 
       if ( allUsers != null ) {
 
@@ -288,7 +291,7 @@ public class StaffFinder {
 
       try {
 
-        list = EntityFinder.findRelated(entity,com.idega.block.staff.data.StaffLocalizedBMPBean.getStaticInstance(StaffLocalized.class));
+        list = EntityFinder.findRelated(entity,GenericEntity.getStaticInstance(StaffLocalized.class));
 
       }
 
