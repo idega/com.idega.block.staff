@@ -186,9 +186,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 
 
 
-    if ( update )
-
-      try {
+    if ( update ) {
+			try {
 
         staffToAdd.update();
 
@@ -199,10 +198,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
         e.printStackTrace(System.err);
 
       }
-
-    else
-
-      try {
+		}
+		else {
+			try {
 
         staffToAdd.insert();
 
@@ -213,6 +211,7 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
         e.printStackTrace(System.err);
 
       }
+		}
 
 
 
@@ -466,9 +465,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	
 	      meta.setAttribute(a1);
 	
-	      if ( v1 != null )
-	
-	        meta.setValue(v1);
+	      if ( v1 != null ) {
+					meta.setValue(v1);
+				}
 	      meta.insert();
 	
 	    }
@@ -483,9 +482,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	
 	      meta.setAttribute(a2);
 	
-	      if ( v2 != null )
-	
-	        meta.setValue(v2);
+	      if ( v2 != null ) {
+					meta.setValue(v2);
+				}
 	      	
 	      meta.insert();
 	
@@ -501,9 +500,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	
 	      meta.setAttribute(a3);
 	
-	      if ( v3 != null )
-	
-	        meta.setValue(v3);
+	      if ( v3 != null ) {
+					meta.setValue(v3);
+				}
 
 	      meta.insert();
 	
@@ -519,9 +518,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	
 	      meta.setAttribute(a4);
 	
-	      if ( v4 != null )
-	
-	        meta.setValue(v4);
+	      if ( v4 != null ) {
+					meta.setValue(v4);
+				}
 	
 	      meta.insert();
 	
@@ -537,9 +536,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	
 	      meta.setAttribute(a5);
 	
-	      if ( v5 != null )
-	
-	        meta.setValue(v5);
+	      if ( v5 != null ) {
+					meta.setValue(v5);
+				}
 	
 	      meta.insert();
 	
@@ -555,9 +554,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	
 	      meta.setAttribute(a6);
 	
-	      if ( v6 != null )
-	
-	        meta.setValue(v6);
+	      if ( v6 != null ) {
+					meta.setValue(v6);
+				}
 	
 	      meta.insert();
 	
@@ -617,9 +616,9 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	
 	        meta.setAttribute(attributes[a]);
 	
-	        if ( values[a] != null )
-	
-	          meta.setValue(values[a]);
+	        if ( values[a] != null ) {
+						meta.setValue(values[a]);
+					}
 	
 	        meta.insert();
 	

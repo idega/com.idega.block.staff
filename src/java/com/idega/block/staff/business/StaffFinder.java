@@ -212,9 +212,9 @@ public class StaffFinder {
 
     List users = UserBusiness.getUsersInPrimaryGroup(group);
 
-    if ( users != null )
-
-      return users;
+    if ( users != null ) {
+			return users;
+		}
 
     return null;
 
@@ -395,9 +395,9 @@ public class StaffFinder {
 
      IWTimestamp stamp = null;
 
-     if ( user.getDateOfBirth() != null )
-
-        stamp = new IWTimestamp(user.getDateOfBirth());
+     if ( user.getDateOfBirth() != null ) {
+			stamp = new IWTimestamp(user.getDateOfBirth());
+		}
 
       IWTimestamp dateToday = new IWTimestamp();
 
@@ -405,9 +405,9 @@ public class StaffFinder {
 
       int userAge = 0;
 
-      if ( stamp != null )
-
-        userAge = (IWTimestamp.getDaysBetween(stamp,dateToday))/365;
+      if ( stamp != null ) {
+				userAge = (IWTimestamp.getDaysBetween(stamp,dateToday))/365;
+			}
 
 /*
 
@@ -427,9 +427,9 @@ public class StaffFinder {
 
     if ( staff != null ) {
 
-      if ( staff.getBeganWork() != null )
-
-        holder.setBeganWork(new IWTimestamp(staff.getBeganWork()));
+      if ( staff.getBeganWork() != null ) {
+				holder.setBeganWork(new IWTimestamp(staff.getBeganWork()));
+			}
 
       holder.setImageID(staff.getImageID());
 
