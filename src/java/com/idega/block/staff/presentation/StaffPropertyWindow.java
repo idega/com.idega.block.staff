@@ -16,9 +16,7 @@ import com.idega.presentation.TabbedPropertyPanel;
 
 public class StaffPropertyWindow extends UserPropertyWindow{
 
-  public static final String PARAMETERSTRING_USER_ID = "ic_user_id";
-  
-  public static final String SESSION_ADDRESS = "st_staff_property_window";
+  private static final String SESSION_ADDRESS = "st_staff_property_window";
 
   public StaffPropertyWindow(){
     super();

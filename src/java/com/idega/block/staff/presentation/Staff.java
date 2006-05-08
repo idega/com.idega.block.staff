@@ -21,6 +21,7 @@ import com.idega.core.contact.data.Phone;
 import com.idega.core.data.GenericGroup;
 import com.idega.core.user.business.UserBusiness;
 import com.idega.core.user.data.User;
+import com.idega.core.user.presentation.UserPropertyWindow;
 import com.idega.idegaweb.IWBundle;
 import com.idega.idegaweb.IWResourceBundle;
 import com.idega.presentation.Block;
@@ -581,7 +582,7 @@ public class Staff extends Block implements Builderaware {
 		Image adminImage = this._iwb.getImage("shared/edit.gif");
 		Link adminLink = new Link(adminImage);
 		adminLink.setWindowToOpen(StaffPropertyWindow.class);
-		adminLink.addParameter(StaffPropertyWindow.PARAMETERSTRING_USER_ID, user.getID());
+		adminLink.addParameter(UserPropertyWindow.PARAMETERSTRING_USER_ID, user.getID());
 
 		return adminLink;
 	}
