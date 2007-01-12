@@ -14,7 +14,7 @@ import com.idega.presentation.ui.TextInput;
  * Title:        User
  * Copyright:    Copyright (c) 2001
  * Company:      idega.is
- * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guðmundur Ágúst Sæmundsson</a>
+ * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guï¿½mundur ï¿½gï¿½st Sï¿½mundsson</a>
  * @version 1.0
  */
 
@@ -230,6 +230,7 @@ public class StaffMetaTab extends UserTab{
   public boolean store(IWContext iwc){
     try{
       if(getUserId() > -1){
+        StaffBusiness business = new StaffBusiness();
         StaffBusiness.updateMetaData(getUserId(),(String)this.fieldValues.get(this.attribute1FieldName),(String)this.fieldValues.get(this.value1FieldName)
                                           ,(String)this.fieldValues.get(this.attribute2FieldName),(String)this.fieldValues.get(this.value2FieldName)
                                           ,(String)this.fieldValues.get(this.attribute3FieldName),(String)this.fieldValues.get(this.value3FieldName)

@@ -36,7 +36,7 @@ import com.idega.util.IWTimestamp;
 
  * Copyright:    Copyright (c) 2000 idega.is All Rights Reserved
 
- * Company:      idega margmiðlun
+ * Company:      idega margmiï¿½lun
 
  * @author
 
@@ -158,7 +158,7 @@ public class StaffFinder {
 
     try {
 
-      List allUsers = EntityFinder.findAll(GenericEntity.getStaticInstance(User.class));
+      List allUsers = EntityFinder.findAll(UserBMPBean.getStaticInstance());
 
       /*if ( allUsers != null ) {
 
@@ -213,8 +213,8 @@ public class StaffFinder {
     List users = UserBusiness.getUsersInPrimaryGroup(group);
 
     if ( users != null ) {
-			return users;
-		}
+		return users;
+	}
 
     return null;
 
@@ -226,7 +226,7 @@ public class StaffFinder {
 
     try {
 
-      List allUsers = EntityFinder.findAllByColumn(GenericEntity.getStaticInstance(User.class),UserBMPBean.getColumnNameFirstName(),letter+"%");
+      List allUsers = EntityFinder.findAllByColumn(UserBMPBean.getStaticInstance(),UserBMPBean.getColumnNameFirstName(),letter+"%");
 
       if ( allUsers != null ) {
 
@@ -396,8 +396,8 @@ public class StaffFinder {
      IWTimestamp stamp = null;
 
      if ( user.getDateOfBirth() != null ) {
-			stamp = new IWTimestamp(user.getDateOfBirth());
-		}
+		stamp = new IWTimestamp(user.getDateOfBirth());
+	}
 
       IWTimestamp dateToday = new IWTimestamp();
 
@@ -406,8 +406,8 @@ public class StaffFinder {
       int userAge = 0;
 
       if ( stamp != null ) {
-				userAge = (IWTimestamp.getDaysBetween(stamp,dateToday))/365;
-			}
+		userAge = (new IWTimestamp().getDaysBetween(stamp,dateToday))/365;
+	}
 
 /*
 
@@ -428,8 +428,8 @@ public class StaffFinder {
     if ( staff != null ) {
 
       if ( staff.getBeganWork() != null ) {
-				holder.setBeganWork(new IWTimestamp(staff.getBeganWork()));
-			}
+		holder.setBeganWork(new IWTimestamp(staff.getBeganWork()));
+	}
 
       holder.setImageID(staff.getImageID());
 

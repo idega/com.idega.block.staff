@@ -13,7 +13,7 @@ import com.idega.presentation.text.Text;
  * Title:        User
  * Copyright:    Copyright (c) 2001
  * Company:      idega.is
- * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guðmundur Ágúst Sæmundsson</a>
+ * @author 2000 - idega team - <a href="mailto:gummi@idega.is">Guï¿½mundur ï¿½gï¿½st Sï¿½mundsson</a>
  * @version 1.0
  */
 
@@ -55,8 +55,8 @@ public class StaffImageTab extends UserTab{
     }
 
     if ( imageId != -1 ) {
-			this.imageField.setImageId(imageId);
-		}
+		this.imageField.setImageId(imageId);
+	}
   }
 
   public void initializeFields(){
@@ -101,6 +101,7 @@ public class StaffImageTab extends UserTab{
   public boolean store(IWContext iwc){
     try{
       if(getUserId() > -1){
+        StaffBusiness business = new StaffBusiness();
         StaffBusiness.updateImage(getUserId(),(String)this.fieldValues.get(this.imageFieldName));
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: StaffUserItem.java,v 1.2 2006/04/09 11:42:00 laddi Exp $
+ * $Id: StaffUserItem.java,v 1.1.2.1 2007/01/12 19:32:48 idegaweb Exp $
  * Created on 22.11.2004
  *
  * Copyright (C) 2004 Idega Software hf. All Rights Reserved.
@@ -31,7 +31,7 @@ import com.idega.user.data.User;
  * Last modified: 22.11.2004 13:34:38 by laddi
  * 
  * @author <a href="mailto:laddi@idega.com">laddi</a>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.1.2.1 $
  */
 public abstract class StaffUserItem extends Block {
 

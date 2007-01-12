@@ -21,7 +21,6 @@ import com.idega.core.contact.data.Phone;
 import com.idega.core.data.GenericGroup;
 import com.idega.core.user.business.UserBusiness;
 import com.idega.core.user.data.User;
-import com.idega.core.user.presentation.UserPropertyWindow;
 import com.idega.idegaweb.IWBundle;
 import com.idega.idegaweb.IWResourceBundle;
 import com.idega.presentation.Block;
@@ -69,6 +68,8 @@ public class Staff extends Block implements Builderaware {
 
 	private boolean _showAge;
 
+	private boolean _showGender;
+
 	private boolean _showEducation;
 
 	private boolean _showTitle;
@@ -80,6 +81,8 @@ public class Staff extends Block implements Builderaware {
 	private boolean _showBeganWork;
 
 	private boolean _showArea;
+
+	private boolean _showImage;
 
 	private boolean _showMetaData;
 
@@ -335,7 +338,7 @@ public class Staff extends Block implements Builderaware {
 
 			int userAge = 0;
 			if (dateOfBirth != null) {
-				userAge = (IWTimestamp.getDaysBetween(dateOfBirth, dateToday)) / 365;
+				userAge = (new IWTimestamp().getDaysBetween(dateOfBirth, dateToday)) / 365;
 			}
 
 			Text age = new Text(this._iwrb.getLocalizedString("user_age", "Age") + ":");
@@ -582,7 +585,7 @@ public class Staff extends Block implements Builderaware {
 		Image adminImage = this._iwb.getImage("shared/edit.gif");
 		Link adminLink = new Link(adminImage);
 		adminLink.setWindowToOpen(StaffPropertyWindow.class);
-		adminLink.addParameter(UserPropertyWindow.PARAMETERSTRING_USER_ID, user.getID());
+		adminLink.addParameter(StaffPropertyWindow.PARAMETERSTRING_USER_ID, user.getID());
 
 		return adminLink;
 	}
@@ -696,11 +699,13 @@ public class Staff extends Block implements Builderaware {
 		this._headlineStyle = "font-family: Arial, Helvetica,sans-serif;font-weight:bold;font-size: 8pt;color: #000000;";
 
 		this._showAge = true;
+		this._showGender = true;
 		this._showEducation = true;
 		this._showTitle = true;
 		this._showSchool = true;
 		this._showBeganWork = true;
 		this._showArea = true;
+		this._showImage = true;
 		this._showMetaData = true;
 	}
 
@@ -725,6 +730,7 @@ public class Staff extends Block implements Builderaware {
 	}
 
 	public void setShowGender(boolean showGender) {
+		this._showGender = showGender;
 	}
 
 	public void setShowEducation(boolean showEducation) {
@@ -752,6 +758,7 @@ public class Staff extends Block implements Builderaware {
 	}
 
 	public void setShowImage(boolean showImage) {
+		this._showImage = showImage;
 	}
 
 	public void setShowExtraInfo(boolean showExtraInfo) {

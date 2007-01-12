@@ -27,7 +27,7 @@ import com.idega.util.IWTimestamp;
 
  * Copyright:    Copyright (c) 2000 idega.is All Rights Reserved
 
- * Company:      idega margmiðlun
+ * Company:      idega margmiï¿½lun
 
  * @author
 
@@ -187,31 +187,31 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 
 
     if ( update ) {
-			try {
+		try {
 
-        staffToAdd.update();
+		    staffToAdd.update();
 
-      }
+		  }
 
-      catch (SQLException e) {
+		  catch (SQLException e) {
 
-        e.printStackTrace(System.err);
+		    e.printStackTrace(System.err);
 
-      }
-		}
-		else {
-			try {
+		  }
+	}
+	else {
+		try {
 
-        staffToAdd.insert();
+		    staffToAdd.insert();
 
-      }
+		  }
 
-      catch (SQLException e) {
+		  catch (SQLException e) {
 
-        e.printStackTrace(System.err);
+		    e.printStackTrace(System.err);
 
-      }
-		}
+		  }
+	}
 
 
 
@@ -466,8 +466,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	      meta.setAttribute(a1);
 	
 	      if ( v1 != null ) {
-					meta.setValue(v1);
-				}
+			meta.setValue(v1);
+		}
 	      meta.insert();
 	
 	    }
@@ -483,8 +483,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	      meta.setAttribute(a2);
 	
 	      if ( v2 != null ) {
-					meta.setValue(v2);
-				}
+			meta.setValue(v2);
+		}
 	      	
 	      meta.insert();
 	
@@ -501,8 +501,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	      meta.setAttribute(a3);
 	
 	      if ( v3 != null ) {
-					meta.setValue(v3);
-				}
+			meta.setValue(v3);
+		}
 
 	      meta.insert();
 	
@@ -519,8 +519,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	      meta.setAttribute(a4);
 	
 	      if ( v4 != null ) {
-					meta.setValue(v4);
-				}
+			meta.setValue(v4);
+		}
 	
 	      meta.insert();
 	
@@ -537,8 +537,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	      meta.setAttribute(a5);
 	
 	      if ( v5 != null ) {
-					meta.setValue(v5);
-				}
+			meta.setValue(v5);
+		}
 	
 	      meta.insert();
 	
@@ -555,8 +555,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	      meta.setAttribute(a6);
 	
 	      if ( v6 != null ) {
-					meta.setValue(v6);
-				}
+			meta.setValue(v6);
+		}
 	
 	      meta.insert();
 	
@@ -617,8 +617,8 @@ public static final String PARAMETER_META_ATTRIBUTE = "attribute";
 	        meta.setAttribute(attributes[a]);
 	
 	        if ( values[a] != null ) {
-						meta.setValue(values[a]);
-					}
+				meta.setValue(values[a]);
+			}
 	
 	        meta.insert();
 	

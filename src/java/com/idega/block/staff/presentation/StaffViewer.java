@@ -21,6 +21,8 @@ import com.idega.business.IBORuntimeException;
 import com.idega.core.builder.data.ICPage;
 import com.idega.core.contact.data.Email;
 import com.idega.idegaweb.IWApplicationContext;
+import com.idega.idegaweb.IWBundle;
+import com.idega.idegaweb.IWResourceBundle;
 import com.idega.idegaweb.block.presentation.Builderaware;
 import com.idega.presentation.Block;
 import com.idega.presentation.IWContext;
@@ -35,10 +37,16 @@ public class StaffViewer extends Block implements Builderaware {
 
 	private final static String IW_BUNDLE_IDENTIFIER = "com.idega.block.staff";
 
+	private IWBundle iwb;
+	private IWResourceBundle iwrb;
+	
 	private Group iGroup;
 	private ICPage iPage;
 
 	public void main(IWContext iwc) throws Exception {
+		this.iwb = iwc.getIWMainApplication().getBundle(IW_CORE_BUNDLE_IDENTIFIER);
+		this.iwrb = getResourceBundle(iwc);
+		
 		if (this.iGroup != null) {
 			add(getStaff(iwc));
 		}

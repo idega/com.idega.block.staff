@@ -5,7 +5,7 @@ package com.idega.block.staff.presentation;
  * Description:
  * Copyright:    Copyright (c) 2000-2001 idega.is All Rights Reserved
  * Company:      idega
-  *@author <a href="mailto:laddi@idega.is">Þórhallur "Laddi" Helgason</a>
+  *@author <a href="mailto:laddi@idega.is">ï¿½ï¿½rhallur "Laddi" Helgason</a>
  * @version 1.2
  */
 
@@ -65,6 +65,7 @@ public class StaffBrowser extends Block implements Builderaware {
 	private boolean _showListTitle;
 	private boolean _showBeganWork;
 	private boolean _showArea;
+	private boolean _showImage;
 	private boolean _showMetaData;
 	private boolean _showWorkPhone;
 	private boolean _showListWorkPhone;
@@ -698,7 +699,7 @@ public class StaffBrowser extends Block implements Builderaware {
 	}
 
 	private Table getAlphabetTable() {
-		String[] alphabet = { "A", "Á", "B", "C", "D", "E", "É", "F", "G", "H", "I", "Í", "J", "K", "L", "M", "N", "O", "Ó", "P", "Q", "R", "S", "T", "U", "Ú", "V", "W", "X", "Y", "Ý", "Z", "Þ", "Æ", "Ö", this._iwrb.getLocalizedString("all", "Allir")};
+		String[] alphabet = { "A", "ï¿½", "B", "C", "D", "E", "ï¿½", "F", "G", "H", "I", "ï¿½", "J", "K", "L", "M", "N", "O", "ï¿½", "P", "Q", "R", "S", "T", "U", "ï¿½", "V", "W", "X", "Y", "ï¿½", "Z", "ï¿½", "ï¿½", "ï¿½", this._iwrb.getLocalizedString("all", "Allir")};
 		Table table = new Table();
 		int column = 1;
 
@@ -807,6 +808,7 @@ public class StaffBrowser extends Block implements Builderaware {
 		this._showTitle = true;
 		this._showBeganWork = true;
 		this._showArea = true;
+		this._showImage = true;
 		this._showMetaData = true;
 		this._showListTitle = false;
 		this._showWorkPhone = true;
@@ -860,6 +862,7 @@ public class StaffBrowser extends Block implements Builderaware {
 	}
 
 	public void setShowImage(boolean showImage) {
+		this._showImage = showImage;
 	}
 
 	public void setShowExtraInfo(boolean showExtraInfo) {

@@ -6,6 +6,13 @@
  */
 package com.idega.block.staff.presentation;
 
+import com.idega.block.staff.business.StaffUserBusiness;
+import com.idega.business.IBOLookup;
+import com.idega.business.IBOLookupException;
+import com.idega.business.IBORuntimeException;
+import com.idega.idegaweb.IWApplicationContext;
+import com.idega.idegaweb.IWBundle;
+import com.idega.idegaweb.IWResourceBundle;
 import com.idega.presentation.Block;
 import com.idega.presentation.IWContext;
 
@@ -19,7 +26,23 @@ public class StaffUserViewer extends Block {
 
 	private final static String IW_BUNDLE_IDENTIFIER = "com.idega.block.staff";
 
+	private IWBundle iwb;
+	private IWResourceBundle iwrb;
+	
+
 	public void main(IWContext iwc) throws Exception {
+		this.iwb = iwc.getIWMainApplication().getBundle(IW_CORE_BUNDLE_IDENTIFIER);
+		this.iwrb = getResourceBundle(iwc);
+		
+	}
+
+	private StaffUserBusiness getBusiness(IWApplicationContext iwac) {
+		try {
+			return (StaffUserBusiness) IBOLookup.getServiceInstance(iwac, StaffUserBusiness.class);
+		}
+		catch (IBOLookupException ile) {
+			throw new IBORuntimeException(ile);
+		}
 	}
 
 	public String getBundleIdentifier() {
