@@ -11,7 +11,6 @@ package com.idega.block.staff.presentation;
 import java.util.Collections;
 import java.util.List;
 
-import com.idega.idegaweb.block.presentation.Builderaware;
 import com.idega.block.staff.business.StaffBusiness;
 import com.idega.block.staff.business.StaffFinder;
 import com.idega.block.staff.data.StaffInfo;
@@ -21,15 +20,16 @@ import com.idega.core.contact.data.Phone;
 import com.idega.core.data.GenericGroup;
 import com.idega.core.user.business.UserBusiness;
 import com.idega.core.user.data.User;
-import com.idega.core.user.presentation.UserPropertyWindow;
 import com.idega.idegaweb.IWBundle;
 import com.idega.idegaweb.IWResourceBundle;
+import com.idega.idegaweb.block.presentation.Builderaware;
 import com.idega.presentation.Block;
 import com.idega.presentation.IWContext;
 import com.idega.presentation.Image;
 import com.idega.presentation.Table;
 import com.idega.presentation.text.Link;
 import com.idega.presentation.text.Text;
+import com.idega.user.presentation.UserPropertyWindow;
 import com.idega.util.GenericUserComparator;
 import com.idega.util.IWTimestamp;
 import com.idega.util.text.StyleConstants;
@@ -624,7 +624,7 @@ public class Staff extends Block implements Builderaware {
 	private Link getAdminButtons() {
 		Image adminImage = this._iwb.getImage("shared/edit.gif");
 		Link adminLink = new Link(adminImage);
-		adminLink.setWindowToOpen(com.idega.core.user.presentation.UserModule.class);
+		adminLink.setWindowToOpen(com.idega.user.presentation.UserModule.class);
 
 		return adminLink;
 	}

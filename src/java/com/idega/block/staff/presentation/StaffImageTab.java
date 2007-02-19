@@ -3,10 +3,10 @@ package com.idega.block.staff.presentation;
 import com.idega.block.media.presentation.ImageInserter;
 import com.idega.block.staff.business.StaffBusiness;
 import com.idega.block.staff.data.StaffInfo;
-import com.idega.core.user.presentation.UserTab;
 import com.idega.presentation.IWContext;
 import com.idega.presentation.Table;
 import com.idega.presentation.text.Text;
+import com.idega.user.presentation.UserTab;
 
 
 /**

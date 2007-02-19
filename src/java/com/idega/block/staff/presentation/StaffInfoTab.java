@@ -4,13 +4,13 @@ import java.util.StringTokenizer;
 
 import com.idega.block.staff.business.StaffBusiness;
 import com.idega.block.staff.data.StaffInfo;
-import com.idega.core.user.presentation.UserTab;
 import com.idega.presentation.IWContext;
 import com.idega.presentation.Table;
 import com.idega.presentation.text.Text;
 import com.idega.presentation.ui.DateInput;
 import com.idega.presentation.ui.TextArea;
 import com.idega.presentation.ui.TextInput;
+import com.idega.user.presentation.UserTab;
 import com.idega.util.IWTimestamp;
 
 
@@ -139,7 +139,7 @@ public class StaffInfoTab extends UserTab{
   public void lineUpFields(){
     this.resize(1,1);
 
-    String rowHeight2 = Integer.toString(Integer.parseInt(this.rowHeight) + 67);
+    String rowHeight2 = Integer.toString(20 + 67);
 
     Table staffTable = new Table(2,5);
     staffTable.setWidth("100%");
@@ -148,8 +148,6 @@ public class StaffInfoTab extends UserTab{
     staffTable.mergeCells(1,3,2,3);
     staffTable.mergeCells(1,4,2,4);
     staffTable.mergeCells(1,5,2,5);
-    staffTable.setHeight(1,this.rowHeight);
-    staffTable.setHeight(2,this.rowHeight);
     staffTable.setHeight(3,rowHeight2);
     staffTable.setHeight(4,rowHeight2);
     staffTable.setHeight(5,rowHeight2);

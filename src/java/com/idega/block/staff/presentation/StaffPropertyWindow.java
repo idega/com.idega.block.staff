@@ -1,10 +1,10 @@
 package com.idega.block.staff.presentation;
 
-import com.idega.core.user.presentation.GeneralUserInfoTab;
-import com.idega.core.user.presentation.UserPhoneTab;
-import com.idega.core.user.presentation.UserPropertyWindow;
 import com.idega.presentation.IWContext;
 import com.idega.presentation.TabbedPropertyPanel;
+import com.idega.user.presentation.GeneralUserInfoTab;
+import com.idega.user.presentation.UserPhoneTab;
+import com.idega.user.presentation.UserPropertyWindow;
 
 /**
  * Title:        User
@@ -16,7 +16,7 @@ import com.idega.presentation.TabbedPropertyPanel;
 
 public class StaffPropertyWindow extends UserPropertyWindow{
 
-  private static final String SESSION_ADDRESS = "st_staff_property_window";
+  //private static final String SESSION_ADDRESS = "st_staff_property_window";
 
   public StaffPropertyWindow(){
     super();
