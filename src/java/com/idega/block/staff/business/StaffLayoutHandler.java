@@ -1,5 +1,5 @@
 /*
- * $Id: StaffLayoutHandler.java,v 1.5 2004/06/28 14:07:44 thomas Exp $
+ * $Id: StaffLayoutHandler.java,v 1.6 2007/12/14 13:36:06 alexis Exp $
  *
  * Copyright (C) 2001 Idega hf. All Rights Reserved.
  *
@@ -38,7 +38,7 @@ public class StaffLayoutHandler implements ICPropertyHandler {
   /**
    *
    */
-  public PresentationObject getHandlerObject(String name, String value, IWContext iwc) {
+  public PresentationObject getHandlerObject(String name, String value, IWContext iwc, boolean oldGenerationHandler, String instanceId, String method) {
     DropdownMenu menu = new DropdownMenu(name);
     menu.addMenuElement("","Select:");
     menu.addMenuElement(Staff.ALL_STAFF,"All staff");

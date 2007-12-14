@@ -20,8 +20,8 @@ import com.idega.presentation.text.Text;
 import com.idega.presentation.ui.DateInput;
 import com.idega.presentation.ui.TextArea;
 import com.idega.presentation.ui.TextInput;
+import com.idega.user.business.UserConstants;
 import com.idega.user.data.User;
-import com.idega.user.presentation.UserConstants;
 import com.idega.user.presentation.UserTab;
 import com.idega.util.IWTimestamp;
 
