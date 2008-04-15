@@ -117,7 +117,7 @@ public class StaffUserTab extends UserTab {
 		IWBundle iwb = getBundle(iwc);
 		Help help = new Help();
 		Image helpImage = iwb.getImage("help.gif");
-		help.setHelpTextBundle(UserConstants.HELP_BUNDLE_IDENTFIER);
+		help.setHelpTextBundle(UserConstants.IW_BUNDLE_IDENTIFIER);
 		help.setHelpTextKey(HELP_TEXT_KEY);
 		help.setImage(helpImage);
 		return help;
