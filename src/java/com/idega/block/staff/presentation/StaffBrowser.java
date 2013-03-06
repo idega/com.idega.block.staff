@@ -5,7 +5,7 @@ package com.idega.block.staff.presentation;
  * Description:
  * Copyright:    Copyright (c) 2000-2001 idega.is All Rights Reserved
  * Company:      idega
-  *@author <a href="mailto:laddi@idega.is">ﬁÛrhallur "Laddi" Helgason</a>
+  *@author <a href="mailto:laddi@idega.is">√û√≥rhallur "Laddi" Helgason</a>
  * @version 1.2
  */
 
@@ -698,7 +698,7 @@ public class StaffBrowser extends Block implements Builderaware {
 	}
 
 	private Table getAlphabetTable() {
-		String[] alphabet = { "A", "¡", "B", "C", "D", "E", "…", "F", "G", "H", "I", "Õ", "J", "K", "L", "M", "N", "O", "”", "P", "Q", "R", "S", "T", "U", "⁄", "V", "W", "X", "Y", "›", "Z", "ﬁ", "∆", "÷", this._iwrb.getLocalizedString("all", "Allir")};
+		String[] alphabet = { "A", "√Å", "B", "C", "D", "E", "√â", "F", "G", "H", "I", "√ç", "J", "K", "L", "M", "N", "O", "√ì", "P", "Q", "R", "S", "T", "U", "√ö", "V", "W", "X", "Y", "√ù", "Z", "√û", "√Ü", "√ñ", this._iwrb.getLocalizedString("all", "Allir")};
 		Table table = new Table();
 		int column = 1;
 
