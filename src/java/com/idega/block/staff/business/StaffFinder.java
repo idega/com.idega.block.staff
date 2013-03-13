@@ -36,7 +36,7 @@ import com.idega.util.IWTimestamp;
 
  * Copyright:    Copyright (c) 2000 idega.is All Rights Reserved
 
- * Company:      idega margmiðlun
+ * Company:      idega margmiÃ°lun
 
  * @author
 
